@@ -1,0 +1,15 @@
+inherit:
+    - ../base_loop.yaml
+
+model:
+    pred_type: classification
+
+training:
+    curriculum:
+        points:
+            start: 31
+            end: 45
+            inc: 1
+
+out_dir: ./results2/openml_loop
+debug_mode: False

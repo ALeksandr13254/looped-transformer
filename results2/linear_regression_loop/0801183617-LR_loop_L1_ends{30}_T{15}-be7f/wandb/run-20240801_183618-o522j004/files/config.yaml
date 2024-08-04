@@ -1,0 +1,58 @@
+config: configs/base_loop.yaml
+debug_mode: false
+gpu:
+  cuda: true
+  n_gpu: 0
+model:
+  family: gpt2_loop
+  loop_func: z=f(x+z)
+  n_dims: 20
+  n_embd: 256
+  n_head: 8
+  n_last_tokens: -1
+  n_layer: 1
+  n_positions: 101
+  pred_type: regression
+  pretrained_path: null
+  use_lstm_layer: false
+out_dir: ./results2/linear_regression_loop\0801183617-LR_loop_L1_ends{30}_T{15}-be7f
+training:
+  add_inputs_embeds: false
+  batch_size: 64
+  curriculum:
+    dims:
+      end: 10
+      inc: 1
+      interval: 20000
+      start: 10
+    loops:
+      end: 30
+      inc: 2
+      interval: 500
+      start: 15
+    points:
+      end: 41
+      inc: 2
+      interval: 1000
+      start: 11
+  keep_every_steps: 20000
+  learning_rate: 0.0001
+  n_loop_window: 15
+  resume_id: null
+  save_every_steps: 1000
+  seed: 42
+  sparsity: 100
+  task_name: linear_regression
+  test_idx: -1
+  test_size: 0
+  train_size: 0
+  train_steps: 20001
+  use_ctx: false
+  use_fixed_dataset: false
+  weight_decay: 0.0
+wandb:
+  log_every_steps: 100
+  name: LR_loop_L1_ends{30}_T{15}
+  notes: ''
+  project: Lets_Loop2
+  timestamp: 08/01/2024, 18:36:17

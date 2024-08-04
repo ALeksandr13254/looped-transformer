@@ -1,0 +1,33 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-08-02T15:59:54.994411",
+    "startedAt": "2024-08-02T15:59:53.011328",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [
+        "--config",
+        "configs/base_loop.yaml",
+        "--model.n_layer",
+        "1",
+        "--training.curriculum.loops.start",
+        "15",
+        "--training.curriculum.loops.end",
+        "30",
+        "--training.n_loop_window",
+        "15",
+        "--wandb.name",
+        "LR_loop_L1_ends{30}_T{15}_last_tokens{75}",
+        "--gpu.n_gpu",
+        "0"
+    ],
+    "state": "running",
+    "program": "scripts/train.py",
+    "codePath": "scripts\\train.py",
+    "host": "MSI_Stealth_17",
+    "username": "artem",
+    "executable": "C:\\ProgramData\\anaconda3\\envs\\loop_tf\\python.exe"
+}

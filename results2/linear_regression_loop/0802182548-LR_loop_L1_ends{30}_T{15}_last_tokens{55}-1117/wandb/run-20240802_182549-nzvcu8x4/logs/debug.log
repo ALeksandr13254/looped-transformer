@@ -1,0 +1,149 @@
+2024-08-02 18:25:49,559 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Loading settings from C:\Users\artem\.config\wandb\settings
+2024-08-02 18:25:49,559 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Loading settings from C:\Users\artem\Music\looped_transformer-main\wandb\settings
+2024-08-02 18:25:49,559 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2024-08-02 18:25:49,559 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': 'scripts\\train.py', 'program': 'scripts/train.py'}
+2024-08-02 18:25:49,559 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Applying login settings: {'api_key': '***REDACTED***'}
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_setup.py:_flush():75] Applying login settings: {'api_key': '***REDACTED***'}
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_init.py:_log_setup():405] Logging user logs to ./results2/linear_regression_loop\0802182548-LR_loop_L1_ends{30}_T{15}_last_tokens{45}-1117\wandb\run-20240802_182549-nzvcu8x4\logs\debug.log
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_init.py:_log_setup():406] Logging internal logs to ./results2/linear_regression_loop\0802182548-LR_loop_L1_ends{30}_T{15}_last_tokens{45}-1117\wandb\run-20240802_182549-nzvcu8x4\logs\debug-internal.log
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_init.py:init():439] calling init triggers
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_init.py:init():442] wandb.init called with sweep_config: {}
+config: {'config': 'configs/base_loop.yaml', 'debug_mode': False, 'training': {'sparsity': 100, 'curriculum': {'points': {'start': 11, 'interval': 1000, 'inc': 2, 'end': 41}, 'loops': {'end': 30, 'start': 15, 'inc': 2, 'interval': 500}, 'dims': {'start': 10, 'inc': 1, 'interval': 20000, 'end': 10}}, 'weight_decay': 0.0, 'use_fixed_dataset': False, 'resume_id': None, 'test_idx': -1, 'task_name': 'linear_regression', 'keep_every_steps': 20000, 'train_steps': 20001, 'batch_size': 64, 'use_ctx': False, 'save_every_steps': 1000, 'test_size': 0, 'seed': 42, 'train_size': 0, 'add_inputs_embeds': False, 'learning_rate': 0.0001, 'n_loop_window': 15}, 'model': {'n_last_tokens': 55, 'pred_type': 'regression', 'family': 'gpt2_loop', 'n_positions': 101, 'n_head': 8, 'n_dims': 20, 'pretrained_path': None, 'n_layer': 1, 'n_embd': 256, 'loop_func': 'z=f(x+z)'}, 'wandb': {'notes': '', 'project': 'Lets_Loop2', 'log_every_steps': 100, 'timestamp': '08/02/2024, 18:25:48', 'name': 'LR_loop_L1_ends{30}_T{15}_last_tokens{45}'}, 'gpu': {'cuda': True, 'n_gpu': 0}, 'out_dir': './results2/linear_regression_loop\\0802182548-LR_loop_L1_ends{30}_T{15}_last_tokens{45}-1117'}
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [wandb_init.py:init():492] starting backend
+2024-08-02 18:25:49,561 INFO    MainThread:8444 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn, using: spawn
+2024-08-02 18:25:49,563 INFO    MainThread:8444 [backend.py:ensure_launched():219] starting backend process...
+2024-08-02 18:25:49,615 INFO    MainThread:8444 [backend.py:ensure_launched():224] started backend process with pid: 24696
+2024-08-02 18:25:49,616 INFO    MainThread:8444 [wandb_init.py:init():501] backend started and connected
+2024-08-02 18:25:49,617 INFO    MainThread:8444 [wandb_init.py:init():565] updated telemetry
+2024-08-02 18:25:49,618 INFO    MainThread:8444 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2024-08-02 18:25:51,381 INFO    MainThread:8444 [wandb_run.py:_on_init():1759] communicating current version
+2024-08-02 18:25:51,632 INFO    MainThread:8444 [wandb_run.py:_on_init():1763] got version response upgrade_message: "wandb version 0.17.5 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-02 18:25:51,632 INFO    MainThread:8444 [wandb_init.py:init():625] starting run threads in backend
+2024-08-02 18:25:51,691 INFO    MainThread:8444 [wandb_run.py:_console_start():1733] atexit reg
+2024-08-02 18:25:51,691 INFO    MainThread:8444 [wandb_run.py:_redirect():1606] redirect: SettingsConsole.WRAP
+2024-08-02 18:25:51,692 INFO    MainThread:8444 [wandb_run.py:_redirect():1643] Wrapping output streams.
+2024-08-02 18:25:51,693 INFO    MainThread:8444 [wandb_run.py:_redirect():1667] Redirects installed.
+2024-08-02 18:25:51,693 INFO    MainThread:8444 [wandb_init.py:init():664] run started, returning control to user process
+2024-08-02 18:43:19,485 INFO    MainThread:8444 [wandb_run.py:_atexit_cleanup():1702] got exitcode: 0
+2024-08-02 18:43:19,486 INFO    MainThread:8444 [wandb_run.py:_restore():1674] restore
+2024-08-02 18:43:19,735 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 942
+}
+
+2024-08-02 18:43:20,163 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 942
+}
+
+2024-08-02 18:43:20,644 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:20,758 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:20,867 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:20,977 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 942
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,085 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 5725
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,194 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,304 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,414 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,522 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:21,632 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:24,079 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+
+2024-08-02 18:43:24,861 INFO    MainThread:8444 [wandb_run.py:_on_finish():1831] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 9933
+  total_bytes: 9933
+}
+local_info {
+}
+
+2024-08-02 18:43:25,988 INFO    MainThread:8444 [wandb_run.py:_footer_history_summary_info():2865] rendering history
+2024-08-02 18:43:25,989 INFO    MainThread:8444 [wandb_run.py:_footer_history_summary_info():2894] rendering summary
+2024-08-02 18:43:25,990 INFO    MainThread:8444 [wandb_run.py:_footer_sync_info():2822] logging synced files

@@ -1,0 +1,13 @@
+inherit:
+    - ../base_loop.yaml
+
+training:
+    task_name: noisy_linear_regression
+    curriculum:
+        points:
+            start: 31
+            end: 45
+            inc: 1
+
+out_dir: ./results2/noisy_LR_loop
+debug_mode: False

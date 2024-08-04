@@ -1,0 +1,14 @@
+inherit:
+    - ../base.yaml
+
+training:
+    task_name: sparse_linear_regression
+    sparsity: 3
+    curriculum:
+        points:
+            start: 31
+            end: 45
+            inc: 1
+
+out_dir: ./results2/sparse_LR_baseline
+debug_mode: False
