@@ -73,7 +73,8 @@ wandb_schema = {
     "notes": merge(tstring, default("")),
     "name": merge(tstring, nullable, default(None)),
     "log_every_steps": merge(tinteger, default(10)),
-    "timestamp": merge(tstring, nullable)
+    "timestamp": merge(tstring, nullable),
+    "key": your_api_key
 }
 
 schema = {
