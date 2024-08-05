@@ -1,4 +1,4 @@
-# Отчет по исследованию Looped Transformers
+# Отчет о проведенных экспериментах Looped Transformers
 
 ## 1. Введение
 
