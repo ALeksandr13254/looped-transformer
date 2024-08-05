@@ -76,6 +76,8 @@ wandb:
 8. `--gpu.n_gpu 0`:
    - Указывает использовать GPU с индексом 0 для обучения. Это позволяет задать, на каком GPU будет выполняться тренировка, если в системе доступно несколько GPU.
 
+В пункте **3. Проверка гипотез** будет подробная инструкция как обучить модели для проверки гипотез.
+
 Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке `jupyter_notebooks`.
 
 ## 1. Введение
@@ -218,17 +220,17 @@ training:
 #### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}.yaml`
 
 #### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L2.yaml`
+    --config configs/base_loop_L2_ends{30}_T{15}.yaml`
 
 #### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L3.yaml`
+    --config configs/base_loop_L3_ends{30}_T{15}.yaml`
 
 **Cравнение результатов моделей:**
 ![LR_loop](charts/LR_loop.png)
