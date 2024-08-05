@@ -27,9 +27,9 @@ wandb:
     project: loop_tf
     notes:
     log_every_steps: 100
-    key: **your_api_key**
+    key: your_api_key
 ```
-Замените **your_api_key** на ваш API-ключ.
+Замените `your_api_key` на ваш API-ключ.
 
 Для обучения decoder-only transformer используйте и выполните bash-скрипт `exec/script_baseline.sh`.
 
