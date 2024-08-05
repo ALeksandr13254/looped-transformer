@@ -182,25 +182,25 @@ training:
 #### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 25
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{25}.yaml 
+    --config configs/base_loop_L1_ends[30]_T[15]_n_last_tokens[25].yaml 
     --wandb.name "base_loop_L1_ends{30}_T{15}_n_last_tokens{25}"`
 
 #### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 55
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{55}.yaml
+    --config configs/base_loop_L1_ends[30]_T[15]_n_last_tokens[55].yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}_n_last_tokens{55}"`
 
 #### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 75
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{75}.yaml
+    --config configs/base_loop_L1_ends[30]_T[15]_n_last_tokens[75].yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}_n_last_tokens{75}"`
 
 #### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1 (чтобы использовать все входные токены)
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}.yaml
+    --config configs/base_loop_L1_ends[30]_T[15].yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}"`
 
 **Cравнение результатов моделей:**
@@ -224,19 +224,19 @@ training:
 #### 3.2.1 Запустим на обучение модель looped transformer с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}.yaml
+    --config configs/base_loop_L1_ends[30]_T[15].yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}"`
 
 #### 3.2.2 Запустим на обучение модель looped transformer с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L2_ends{30}_T{15}.yaml
+    --config configs/base_loop_L2_ends[30]_T[15].yaml
     --wandb.name "base_loop_L2_ends{30}_T{15}"`
 
 #### 3.2.3 Запустим на обучение модель looped transformer с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L3_ends{30}_T{15}.yaml
+    --config configs/base_loop_L3_ends[30]_T[15].yaml
     --wandb.name "base_loop_L3_ends{30}_T{15}"`
 
 **Cравнение результатов моделей:**
@@ -264,19 +264,19 @@ training:
 #### 3.3.1 Запустим на обучение модель looped LSTM с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}_lstm.yaml
+    --config configs/base_loop_L1_ends[30]_T[15]_lstm.yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}_lstm"`
 
 #### 3.3.2 Запустим на обучение модель looped LSTM с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L2_ends{30}_T{15}_lstm.yaml
+    --config configs/base_loop_L2_ends[30]_T[15]_lstm.yaml
     --wandb.name "base_loop_L2_ends{30}_T{15}_lstm"`
 
 #### 3.3.3 Запустим на обучение модель looped LSTM с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L3_ends{30}_T{15}_lstm.yaml
+    --config configs/base_loop_L3_ends[30]_T[15]_lstm.yaml
     --wandb.name "base_loop_L3_ends{30}_T{15}_lstm"`
 
 **Cравнение результатов моделей:**
