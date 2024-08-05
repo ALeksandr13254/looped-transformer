@@ -5,9 +5,9 @@
 - [Введение](#1-введение)
 - [Методика исследования](#2-методика-исследования)
 - [Проверка гипотез](#3-проверка-гипотез)
-    - [Information Flow](##31-information-flow)
-    - [Looped n-layers](##32-looped-n-layers)
-    - [Looped LSTM testing](##33-looped-lstm-testing)
+    - [Information Flow](#31-information-flow)
+    - [Looped n-layers](#32-looped-n-layers)
+    - [Looped LSTM testing](#33-looped-lstm-testing)
 - [Ключевые результаты и выводы](#4-ключевые-результаты-и-выводы)
 
 ## 0. Инструкция по установке и запуску кода
