@@ -35,6 +35,10 @@
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
+Можно передавать часть параметров напрямую через консоль, например:
+
+`python scripts/train.py --config configs/base_loop.yaml --model.n_layer 1 --training.curriculum.loops.start 15 --training.curriculum.loops.end 30 --training.n_loop_window 15 --wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}" --gpu.n_gpu 0`
+
 ## 1. Введение
 
 В ходе выполнения исследования была проанализирована статья [Looped Transformers are better at learning algorithms](https://arxiv.org/abs/2311.12424v3), в которой рассматривался подход к решению задачи in-context learning с использованием линейной регрессии и других классов функций. В статье исследовались возможности decoder-only transformer и looped transformer для улучшения обучения алгоритмов в контексте итеративных задач.
