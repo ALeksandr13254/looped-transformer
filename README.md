@@ -18,7 +18,7 @@
 
 Также можете отдельно вызывать модели с помощью команд в консоли:
 
-`python scripts/train.py --config configs/base_loop.yaml` - для decoder-only transformer
+`python scripts/train.py --config configs/base.yaml` - для decoder-only transformer
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
