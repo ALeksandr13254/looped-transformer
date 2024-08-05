@@ -19,9 +19,9 @@
 
     conda activate loop_tf
 
-Для обучения стандартного трансформера используйте и выполните bash-скрипт `exec/script_baseline.sh`.
+Для обучения decoder-only transformer используйте и выполните bash-скрипт `exec/script_baseline.sh`.
 
-Для обучения looped трансформера используйте и выполните bash-скрипт `exec/script_loop.sh`.
+Для обучения looped transformer используйте и выполните bash-скрипт `exec/script_loop.sh`.
     
     Параметр `b` определяет максимальное количество итераций цикла во время обучения
     
@@ -33,7 +33,7 @@
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
-Для построения графиков и сравнения моделей используйте notebook Charts_LR_Research.ipynb в папке jupyter_notebooks.
+Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке jupyter_notebooks.
 
 ## 1. Введение
 
