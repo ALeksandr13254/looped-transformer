@@ -2,6 +2,12 @@
 
 ## 0. Инструкции по запуску кода
 
+Установите и активируйте окружение через:
+
+    conda env create -f environment.yml
+
+    conda activate loop_tf
+
 Для обучения стандартного трансформера используйте и выполните bash-скрипт `exec/script_baseline.sh`.
 
 Для обучения looped трансформера используйте и выполните bash-скрипт `exec/script_loop.sh`.
@@ -12,9 +18,9 @@
 
 Также можете отдельно вызывать модели с помощью команд в консоли:
 
-`python scripts/train.py --config configs/base_loop.yaml` - для decoder-only transformer
+`python scripts/train.py --config configs/base_loop.yaml` - для decoder-only transformer.
 
-`python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
+`python scripts/train.py --config configs/base_loop.yaml` - для looped transformer.
 
 Для построения графиков и сравнения моделей используйте notebook Charts_LR_Research.ipynb в папке jupyter_notebooks.
 
