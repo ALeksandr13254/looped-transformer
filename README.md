@@ -180,22 +180,22 @@ model:
 #### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 20
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_n_last_tokens{20}.yaml`
+    --config configs/base_loop_L1_n_last_tokens{20}.yaml`
 
 #### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 55
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_n_last_tokens{55}.yaml`
+    --config configs/base_loop_L1_n_last_tokens{55}.yaml`
 
 #### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 75
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_n_last_tokens{75}.yaml`
+    --config configs/base_loop_L1_n_last_tokens{75}.yaml`
 
 #### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_n_last_tokens{all}.yaml`
+    --config configs/base_loop_L1_n_last_tokens{all}.yaml`
 
 **Cравнение результатов моделей:**
 ![LR_loop_last_tokens](charts/LR_loop_last_tokens.png)
