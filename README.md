@@ -197,7 +197,7 @@ training:
     --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{75}.yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}_n_last_tokens{75}"`
 
-#### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1
+#### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1 (для того, чтобы использовать все входные токены)
 Для этого введем в консоль команду:
 `python scripts/train.py
     --config configs/base_loop_L1_ends{30}_T{15}.yaml
