@@ -261,19 +261,19 @@ training:
 **Процесс проведения:**
 Для проверки данной гипотезы был доработан исходный код первоначального исследования, и в конфигурационный файл модели был добавлен параметр model.use_lstm_layer, который отвечает за то, будут ли использоваться слои LSTM (значение `True`) или decoder-only transformer блоки (значение `False`). Проведено обучение моделей looped LSTM с 1, 2 и 3 слоями, для этого в конфигурационном файле модели устанавливались значение параметра model.use_lstm_layer равным `True` и значение параметра model.n_layer равным: 1, 2 и 3.
 
-#### 3.2.1 Запустим на обучение модель looped LSTM с параметром model.n_layer = 1
+#### 3.3.1 Запустим на обучение модель looped LSTM с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
     --config configs/base_loop_L1_ends{30}_T{15}_lstm.yaml
     --wandb.name "base_loop_L1_ends{30}_T{15}_lstm"`
 
-#### 3.2.2 Запустим на обучение модель looped LSTM с параметром model.n_layer = 2
+#### 3.3.2 Запустим на обучение модель looped LSTM с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
     --config configs/base_loop_L2_ends{30}_T{15}_lstm.yaml
     --wandb.name "base_loop_L2_ends{30}_T{15}_lstm"`
 
-#### 3.2.3 Запустим на обучение модель looped LSTM с параметром model.n_layer = 3
+#### 3.3.3 Запустим на обучение модель looped LSTM с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
     --config configs/base_loop_L3_ends{30}_T{15}_lstm.yaml
