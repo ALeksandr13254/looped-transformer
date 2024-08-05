@@ -36,7 +36,7 @@ model:
     n_dims: 20
     n_positions: 101
     n_last_tokens: -1
-    use_lstm_layer: True
+    use_lstm_layer: False
 
  training:
     batch_size: 64
