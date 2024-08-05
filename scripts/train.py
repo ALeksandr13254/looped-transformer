@@ -86,7 +86,7 @@ def main(args, device):
     else:
         ctx = None
     ################################################
-    wandb.login(key="515d235338587ef4305dd3c4385df076e636a95d")
+    wandb.login(key=args.wandb.key)
 
     wandb.init(
         dir=args.out_dir,
