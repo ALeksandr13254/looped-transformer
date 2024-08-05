@@ -39,7 +39,7 @@ wandb:
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
-Также можно передавать параметры, указывая их в качестве аргументов. В качестве примера запустим на обучение модель looped transformer с некоторыми параметрами:
+Также можно передавать параметры, указывая их в качестве аргументов. В качестве примера запустим на обучение модель looped transformer с некоторым наборов аргументов:
 
 `python scripts/train.py
     --config configs/base_loop.yaml
