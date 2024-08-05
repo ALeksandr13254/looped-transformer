@@ -18,6 +18,18 @@
     conda env create -f environment.yml
 
     conda activate loop_tf
+    
+Если у вас еще нет API-ключа, вам нужно его получить. Зайдите на сайт [WandB](https://wandb.ai/) и войдите в свою учетную запись. Вы сможете создать новый API-ключ, если у вас его нет, или скопировать уже существующий.
+
+### Конфигурационный файл wandb:
+```yaml
+wandb:
+    project: loop_tf
+    notes:
+    log_every_steps: 100
+    key: **your_api_key**
+```
+Замените **your_api_key** на ваш API-ключ.
 
 Для обучения decoder-only transformer используйте и выполните bash-скрипт `exec/script_baseline.sh`.
 
