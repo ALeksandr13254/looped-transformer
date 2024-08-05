@@ -33,7 +33,7 @@
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
-Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке jupyter_notebooks.
+Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке `jupyter_notebooks`.
 
 ## 1. Введение
 
