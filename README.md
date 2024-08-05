@@ -177,9 +177,21 @@ model:
 **Процесс проведения:**
 Для проверки этой гипотезы были проведены эксперименты по маскировке части выходного состояния looped transformer для каждой итерации, оставляя только n последних токенов. Для этого был доработан исходный код первоначального исследования, и в конфигурационный файл модели был добавлен параметр model.n_last_tokens, который отвечает за то, сколько последних токенов, подаваемых на вход каждого слоя, будет использоваться. Затем были обучены модели с параметром model.n_last_tokens равным: 20, 55, 75 и -1 (для того, чтобы использовать все входные токены).
 
-#### 3.1.1 Запустим на обучение модель looped transformer с model.n_last_tokens = 20
+#### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 20
 `python scripts/train.py
     --config configs/base_loop_n_last_tokens{20}.yaml`
+
+#### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 55
+`python scripts/train.py
+    --config configs/base_loop_n_last_tokens{55}.yaml`
+
+#### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 75
+`python scripts/train.py
+    --config configs/base_loop_n_last_tokens{75}.yaml`
+
+#### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1
+`python scripts/train.py
+    --config configs/base_loop_n_last_tokens{all}.yaml`
 
 **Cравнение результатов моделей:**
 ![LR_loop_last_tokens](charts/LR_loop_last_tokens.png)
