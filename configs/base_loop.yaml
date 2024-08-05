@@ -36,11 +36,11 @@ training:
             inc: 2
             interval: 1000
         loops:
-            start: 20
+            start: 15
             end: 30
             inc: 2
             interval: 500
-    n_loop_window: 20
+    n_loop_window: 15
 
 out_dir: ./results2/linear_regression_loop
 debug_mode: False
