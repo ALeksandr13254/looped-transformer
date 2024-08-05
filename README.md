@@ -1,5 +1,16 @@
 # Отчет о проведенных экспериментах с Looped Transformers
 
+## 0. Инструкции по запуску кода
+
+Для обучения стандартного трансформера используйте и выполните bash-скрипт `exec/script_baseline.sh`.
+Для обучения looped трансформера используйте и выполните bash-скрипт `exec/script_loop.sh`.
+Параметр `b` определяет максимальное количество итераций цикла во время обучения.
+Параметр `T` задает размер окна цикла.
+Также можете отдельно вызывать модели с помощью команд в консоли:
+`python scripts/train.py --config configs/base_loop.yaml` - для decoder-only transformer
+`python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
+Для построения графиков и сравнения моделей используйте notebook Charts_LR_Research.ipynb в папке jupyter_notebooks.
+
 ## 1. Введение
 
 В ходе выполнения исследования была проанализирована статья [Looped Transformers are better at learning algorithms](https://arxiv.org/abs/2311.12424v3), в которой рассматривался подход к решению задачи in-context learning с использованием линейной регрессии и других классов функций. В статье исследовались возможности decoder-only transformer и looped transformer для улучшения обучения алгоритмам в контексте итеративных задач.
