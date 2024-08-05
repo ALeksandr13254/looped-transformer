@@ -135,7 +135,7 @@ model:
     n_last_tokens: -1
     use_lstm_layer: False
 
- training:
+training:
     batch_size: 64
     task_name: linear_regression
     learning_rate: 0.0001
@@ -155,11 +155,11 @@ model:
             inc: 2
             interval: 1000
         loops:
-            start: 20
+            start: 15
             end: 30
             inc: 2
             interval: 500
-    n_loop_window: 20
+    n_loop_window: 15
 ```
 
 * Обучение включает в себя 20001 шагов.
@@ -180,22 +180,22 @@ model:
 #### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 20
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_n_last_tokens{20}.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{20}.yaml`
 
 #### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 55
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_n_last_tokens{55}.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{55}.yaml`
 
 #### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = 75
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_n_last_tokens{75}.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens.yaml`
 
 #### 3.1.4 Запустим на обучение модель looped transformer с параметром model.n_last_tokens = -1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_n_last_tokens{all}.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}_n_last_tokens{all}.yaml`
 
 **Cравнение результатов моделей:**
 ![LR_loop_last_tokens](charts/LR_loop_last_tokens.png)
@@ -214,6 +214,21 @@ model:
 
 **Процесс проведения:**
 Для проверки данной гипотезы было проведено обучение моделей looped transformer с 1, 2 и 3 слоями, для этого в конфигурационном файле модели устанавливалось значение параметра model.n_layer равным: 1, 2 и 3.
+
+#### 3.1.1 Запустим на обучение модель looped transformer с параметром model.n_layer = 1
+Для этого введем в консоль команду:
+`python scripts/train.py
+    --config configs/base_loop_L1.yaml`
+
+#### 3.1.2 Запустим на обучение модель looped transformer с параметром model.n_layer = 2
+Для этого введем в консоль команду:
+`python scripts/train.py
+    --config configs/base_loop_L2.yaml`
+
+#### 3.1.3 Запустим на обучение модель looped transformer с параметром model.n_layer = 3
+Для этого введем в консоль команду:
+`python scripts/train.py
+    --config configs/base_loop_L3.yaml`
 
 **Cравнение результатов моделей:**
 ![LR_loop](charts/LR_loop.png)
