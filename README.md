@@ -224,17 +224,20 @@ training:
 #### 3.2.1 Запустим на обучение модель looped transformer с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}.yaml
+    --wandb.name "base_loop_L1_ends{30}_T{15}"`
 
 #### 3.2.2 Запустим на обучение модель looped transformer с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L2_ends{30}_T{15}.yaml`
+    --config configs/base_loop_L2_ends{30}_T{15}.yaml
+    --wandb.name "base_loop_L2_ends{30}_T{15}"`
 
 #### 3.2.3 Запустим на обучение модель looped transformer с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L3_ends{30}_T{15}.yaml`
+    --config configs/base_loop_L3_ends{30}_T{15}.yaml
+    --wandb.name "base_loop_L3_ends{30}_T{15}"`
 
 **Cравнение результатов моделей:**
 ![LR_loop](charts/LR_loop.png)
@@ -261,17 +264,20 @@ training:
 #### 3.2.1 Запустим на обучение модель looped LSTM с параметром model.n_layer = 1
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L1_ends{30}_T{15}_lstm.yaml`
+    --config configs/base_loop_L1_ends{30}_T{15}_lstm.yaml
+    --wandb.name "base_loop_L1_ends{30}_T{15}_lstm"`
 
 #### 3.2.2 Запустим на обучение модель looped LSTM с параметром model.n_layer = 2
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L2_ends{30}_T{15}_lstm.yaml`
+    --config configs/base_loop_L2_ends{30}_T{15}_lstm.yaml
+    --wandb.name "base_loop_L2_ends{30}_T{15}_lstm"`
 
 #### 3.2.3 Запустим на обучение модель looped LSTM с параметром model.n_layer = 3
 Для этого введем в консоль команду:
 `python scripts/train.py
-    --config configs/base_loop_L3_ends{30}_T{15}_lstm.yaml`
+    --config configs/base_loop_L3_ends{30}_T{15}_lstm.yaml
+    --wandb.name "base_loop_L3_ends{30}_T{15}_lstm"`
 
 **Cравнение результатов моделей:**
 ![LR_loop_lstm](charts/LR_loop_lstm.png)
