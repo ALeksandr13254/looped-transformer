@@ -38,7 +38,7 @@ training:
             end: 1
             inc: 2
             interval: 500
-    n_loop_window: 20
+    n_loop_window: 15
 
 out_dir: ./results2/linear_regression_baseline
 debug_mode: False
