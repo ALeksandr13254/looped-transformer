@@ -35,10 +35,66 @@
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
-Можно передавать часть параметров напрямую через консоль, например:
+Можно передавать параметры, указывая их в качестве аргументов, например:
 
-`python scripts/train.py --config configs/base_loop.yaml --model.n_layer 1 --training.curriculum.loops.start 15 --training.curriculum.loops.end 30 --training.n_loop_window 15 --wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}" --gpu.n_gpu 0`
+`python scripts/train.py \
+    --config configs/base_loop.yaml \
+    --model.n_layer 1 \
+    --training.curriculum.loops.start 15 \
+    --training.curriculum.loops.end 30 \
+    --training.n_loop_window 15 \
+    --wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}" \
+    --gpu.n_gpu 0`
 
+Описание каждого параметра, передаваемого через консоль в примере выше:
+
+1. **`python scripts/train.py`**:
+   - Запускает скрипт `train.py`, расположенный в папке `scripts`.
+
+2. **`--config configs/base_loop.yaml`**:
+   - Указывает конфигурационный файл `base_loop.yaml`, расположенный в папке `configs`. Этот файл содержит основные настройки для тренировки модели.
+
+3. **`--model.n_layer 1`**:
+   - Задает количество слоев в модели. В данном случае, модель будет иметь один слой.
+
+4. **`--training.curriculum.loops.start 15`**:
+   - Устанавливает начальное количество итераций для Looped Transformer'a в процессе обучения. Здесь начальное значение равно 15.
+
+5. **`--training.curriculum.loops.end 30`**:
+   - Устанавливает конечное количество итераций для Looped Transformer'a, до которого модель будет увеличивать это значение в процессе обучения. Здесь конечное значение равно 30.
+
+6. **`--training.n_loop_window 15`**:
+   - Определяет количество шагов, на которых будет вычисляться градиент. В данном случае, значение равно 15, что помогает ускорить обучение и стабилизировать градиент.
+
+7. **`--wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}"`**:
+   - Задает имя для эксперимента в Weights & Biases (wandb), что полезно для отслеживания и управления экспериментами. В данном случае, имя эксперимента включает информацию о количестве слоев, конечном количестве итераций и других параметрах, что помогает идентифицировать эксперимент.
+
+8. **`--gpu.n_gpu 0`**:
+   - Указывает использовать GPU с индексом 0 для обучения. Это позволяет задать, на каком GPU будет выполняться тренировка, если в системе доступно несколько GPU.
+
+### Пример в контексте:
+
+Запуск команды в консоли:
+
+```bash
+python scripts/train.py \
+    --config configs/base_loop.yaml \
+    --model.n_layer 1 \
+    --training.curriculum.loops.start 15 \
+    --training.curriculum.loops.end 30 \
+    --training.n_loop_window 15 \
+    --wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}" \
+    --gpu.n_gpu 0
+```
+
+**Что это делает:**
+- Загружает конфигурационный файл `base_loop.yaml`.
+- Определяет, что модель будет иметь один слой (`--model.n_layer 1`).
+- Устанавливает начальное количество итераций для Looped Transformer'a на 15 (`--training.curriculum.loops.start 15`).
+- Устанавливает конечное количество итераций для Looped Transformer'a на 30 (`--training.curriculum.loops.end 30`).
+- Определяет, что градиент будет вычисляться на каждом из 15 шагов (`--training.n_loop_window 15`).
+- Задает имя эксперимента для Weights & Biases, чтобы его можно было легко идентифицировать (`--wandb.name "LR_loop_L1_ends{30}_T{15}_last_tokens{75}"`).
+- Указывает использовать GPU с индексом 0 для тренировки (`--gpu.n_gpu 0`).
 ## 1. Введение
 
 В ходе выполнения исследования была проанализирована статья [Looped Transformers are better at learning algorithms](https://arxiv.org/abs/2311.12424v3), в которой рассматривался подход к решению задачи in-context learning с использованием линейной регрессии и других классов функций. В статье исследовались возможности decoder-only transformer и looped transformer для улучшения обучения алгоритмов в контексте итеративных задач.
