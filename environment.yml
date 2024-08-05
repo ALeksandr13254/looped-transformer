@@ -1,4 +1,4 @@
-name: loop_tf23
+name: loop_tf
 channels:
   - pytorch
   - nvidia
