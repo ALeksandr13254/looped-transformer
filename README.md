@@ -33,23 +33,13 @@ wandb:
 ```
 Замените `your_api_key` на ваш API-ключ.
 
-Для обучения decoder-only transformer используйте и выполните bash-скрипт `exec/script_baseline.sh`.
-
-Для обучения looped transformer используйте и выполните bash-скрипт `exec/script_loop.sh`.
-    
-    Параметр `b` определяет максимальное количество итераций цикла во время обучения
-    
-    Параметр `T` задает размер окна цикла
-
-Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке `jupyter_notebooks`.
-
-Также можете отдельно вызывать модели с помощью команд в консоли из настроенного conda окружения:
+Можно отдельно вызывать модели с помощью команд в консоли из настроенного conda окружения:
 
 `python scripts/train.py --config configs/base.yaml` - для decoder-only transformer
 
 `python scripts/train.py --config configs/base_loop.yaml` - для looped transformer
 
-Можно передавать параметры, указывая их в качестве аргументов. В качестве примера запустим на обучение модель looped transformer:
+Также можно передавать параметры, указывая их в качестве аргументов. В качестве примера запустим на обучение модель looped transformer:
 
 `python scripts/train.py
     --config configs/base_loop.yaml
@@ -85,6 +75,8 @@ wandb:
 
 8. `--gpu.n_gpu 0`:
    - Указывает использовать GPU с индексом 0 для обучения. Это позволяет задать, на каком GPU будет выполняться тренировка, если в системе доступно несколько GPU.
+
+Для построения графиков и сравнения моделей используйте notebook `Charts_LR_Research.ipynb` в папке `jupyter_notebooks`.
 
 ## 1. Введение
 
